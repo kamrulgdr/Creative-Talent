@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+@import './variables.css';
+@import './utilities.css';
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+body{
+  font-family: 'Montserrat', sans-serif;
+  color: var(--dark);
+  background: var(--primary);
+}
+
+
+
+/* ******************
+Header section starts
+******************* */
+header{
+  background: var(--pure);
+  min-height: 100vh;
+  background-size: cover;
+}
+
+header .brand a{
+  text-decoration: none;
+  color: #F34B53;
+}
+
+header .brand label{
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+header nav{
+  padding: 20px 40px 20px 100px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  border-bottom: 1px solid #F34B53;
+}
+
+header nav .nav-right{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header nav .nav-right a{
+  text-decoration: none;
+  color: var(--dark);
+  margin-right: 30px;
+  position: relative;
+  font-weight: 400;
+}
+
+
+header nav .nav-right a::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -30px;
+  width: 0%;
+  height: 2px;
+  background: #F34B53;
+  transition: width .3s ease-in-out;
+}
+
+header nav .nav-right a:hover::after{
+  width: 70%;
+  background: linear-gradient(to right,#F98C39, #F34B53);
+}
+
+header nav .nav-right a.active::after{
+  width: 70%;
+  background: linear-gradient(to right,#F98C39, #F34B53);
+}
+
+header nav .nav-right .search > div{
+  background: linear-gradient(to right,#F98C39, #F34B53);
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  border-radius: 50px;
+}
+
+header nav .nav-right .search > div input{
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #fff;
+}
+
+header nav .nav-right .search > div img{
+  padding-right: 16px;
+}
+
+
+
+
+/* ******************
+Hero section starts
+******************* */
+.hero{
+  position: relative;
+}
+.social{
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-right: 1px solid #F98C39;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 87vh;
+}
+
+.social img {
+  width: 40px;
+  height: 40px;
+  padding: 4px;
+  align-items: center;
+  border: 2px solid var(--dark);
+  border-radius: 50%;
+  justify-content: center;
+}
+
+.social img.active2{
+  background: linear-gradient(to right,#F98C39, #F34B53);
+}
+
+.social img:hover{
+  background: linear-gradient(to right,#F98C39, #F34B53);
+}
+
+.social div{
+  display: flex;
+  margin-bottom: 30px;
+  left: -100%;
+}
+
+.social .fab{
+  color: var(--dark);
+}
+
+
+.hero .cta{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: calc(100vh - 80px);
+}
+
+.hero .cta h1{
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.hero .cta > div{
+  flex: 1;
+}
+
+.hero .cta .left-section{
+  padding: 0 60px 0 30px;
+}
+
+.hero .cta .right-section img{
+  height: 70vh;
+  
+}
+
+
+/* ******************
+Strip section starts
+******************* */
+section.strip{
+  color: var(--pure);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: var(--gray);
+  padding: 50px 0;
+}
+
